@@ -1,130 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Physique-Chimie - Découvrons la Science !</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    background: linear-gradient(135deg, #3a7bd5, #3a6073);
-    overflow-x: hidden;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liens Physique-Chimie</title>
+  <style>
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      text-align: center;
+      padding-top: 60px;
+      background: linear-gradient(135deg, #c2e9fb, #a1c4fd);
+      min-height: 100vh;
+      margin: 0;
+    }
 
-  header {
-    text-align: center;
-    padding: 60px 20px 30px;
-    animation: fadeIn 2s ease-in-out;
-  }
+    h1 {
+      color: #222;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
 
-  header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-  }
+    p {
+      font-size: 1.1em;
+      color: #333;
+      margin-bottom: 40px;
+    }
 
-  header p {
-    font-size: 1.1rem;
-    font-style: italic;
-    opacity: 0.9;
-  }
+    .link-btn {
+      display: block;
+      margin: 15px auto;
+      padding: 15px 25px;
+      width: 280px;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(90deg, #4f86f7, #7f53ac);
+      border-radius: 12px;
+      font-size: 1.1em;
+      font-weight: 600;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
 
-  .science-img {
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    margin: 40px auto;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-    animation: float 4s ease-in-out infinite;
-  }
+    .link-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+      background: linear-gradient(90deg, #7f53ac, #4f86f7);
+    }
 
-  .cta {
-    display: block;
-    text-align: center;
-    margin: 40px auto;
-  }
+    footer {
+      margin-top: 50px;
+      color: #333;
+      font-size: 0.9em;
+    }
 
-  .cta a {
-    text-decoration: none;
-    background: linear-gradient(90deg, #667eea, #764ba2);
-    padding: 15px 35px;
-    color: white;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  }
-
-  .cta a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-  }
-
-  footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-    opacity: 0.8;
-  }
-
-  @keyframes fadeIn {
-    from {opacity: 0; transform: translateY(-20px);}
-    to {opacity: 1; transform: translateY(0);}
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-  }
-
-  /* Petites particules animées */
-  .particle {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: rgba(255,255,255,0.8);
-    border-radius: 50%;
-    animation: move 10s linear infinite;
-  }
-
-  @keyframes move {
-    from {transform: translateY(0);}
-    to {transform: translateY(-100vh);}
-  }
-</style>
+    .emoji {
+      font-size: 1.3em;
+      margin-right: 6px;
+    }
+  </style>
 </head>
-
 <body>
+  <h1>🌟 Bienvenue en Physique-Chimie 🌟</h1>
+  <p>Choisissez votre niveau pour accéder à votre espace :</p>
 
-<header>
-  <h1>Bienvenue en Physique-Chimie ⚗️</h1>
-  <p>"La science n’est pas seulement une discipline, c’est une aventure pour comprendre le monde."</p>
-</header>
+  <a class="link-btn" href="https://whatsapp.com/channel/0029Vb6KjLY89inciiUkq22m">
+    <span class="emoji">⚡</span> 1ère année collège
+  </a>
 
-<img src="59c0c9a5-f238-4f83-a7f0-43e077e5a53d.png" alt="Enfants en laboratoire" class="science-img">
+  <a class="link-btn" href="https://whatsapp.com/channel/0029VbAv0ZM2ZjCqn8E3hK46">
+    <span class="emoji">🧪</span> 2ème année collège
+  </a>
 
-<div class="cta">
-  <a href="#">En savoir plus sur la Physique-Chimie</a>
-</div>
-
-<footer>
-  © 2025 - Inspiré par la curiosité scientifique ✨
-</footer>
-
-<!-- Particules décoratives -->
-<script>
-  for(let i = 0; i < 20; i++) {
-    const p = document.createElement('div');
-    p.className = 'particle';
-    p.style.left = Math.random() * 100 + 'vw';
-    p.style.top = Math.random() * 100 + 'vh';
-    p.style.animationDuration = 5 + Math.random() * 10 + 's';
-    document.body.appendChild(p);
-  }
-</script>
-
+  <footer>
+    <p>© 2025 - Mme Imane El Khaouli| Physique-Chimie</p>
+  </footer>
 </body>
 </html>
