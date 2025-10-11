@@ -1,130 +1,136 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Physique-Chimie - Découvrons la Science !</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    background: linear-gradient(135deg, #3a7bd5, #3a6073);
-    overflow-x: hidden;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physique-Chimie – Mme Imane</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-  header {
-    text-align: center;
-    padding: 60px 20px 30px;
-    animation: fadeIn 2s ease-in-out;
-  }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      background: radial-gradient(circle at top right, #b3e5fc, #a1c4fd, #d1c4e9);
+      overflow-x: hidden;
+      color: #222;
+      min-height: 100vh;
+    }
 
-  header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-  }
+    header {
+      padding: 30px 10px 10px;
+      position: relative;
+    }
 
-  header p {
-    font-size: 1.1rem;
-    font-style: italic;
-    opacity: 0.9;
-  }
+    header img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: float 3s ease-in-out infinite;
+    }
 
-  .science-img {
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    margin: 40px auto;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-    animation: float 4s ease-in-out infinite;
-  }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0); }
+    }
 
-  .cta {
-    display: block;
-    text-align: center;
-    margin: 40px auto;
-  }
+    h1 {
+      font-size: 2.3em;
+      color: #222;
+      margin-top: 15px;
+    }
 
-  .cta a {
-    text-decoration: none;
-    background: linear-gradient(90deg, #667eea, #764ba2);
-    padding: 15px 35px;
-    color: white;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  }
+    .quote {
+      font-style: italic;
+      color: #333;
+      font-size: 1.1em;
+      margin: 10px auto 40px;
+      width: 80%;
+      max-width: 600px;
+    }
 
-  .cta a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-  }
+    .link-btn {
+      display: block;
+      margin: 15px auto;
+      padding: 15px 25px;
+      width: 280px;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(90deg, #4f86f7, #7f53ac);
+      border-radius: 12px;
+      font-size: 1.1em;
+      font-weight: 600;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
 
-  footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-    opacity: 0.8;
-  }
+    .link-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+      background: linear-gradient(90deg, #7f53ac, #4f86f7);
+    }
 
-  @keyframes fadeIn {
-    from {opacity: 0; transform: translateY(-20px);}
-    to {opacity: 1; transform: translateY(0);}
-  }
+    footer {
+      margin-top: 60px;
+      padding-bottom: 20px;
+      color: #444;
+      font-size: 0.9em;
+    }
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-  }
+    /* Petites animations de bulles et particules */
+    .atom {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.8);
+      animation: move 8s linear infinite;
+    }
 
-  /* Petites particules animées */
-  .particle {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: rgba(255,255,255,0.8);
-    border-radius: 50%;
-    animation: move 10s linear infinite;
-  }
+    @keyframes move {
+      from { transform: translateY(100vh) scale(0.5); opacity: 1; }
+      to { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+    }
 
-  @keyframes move {
-    from {transform: translateY(0);}
-    to {transform: translateY(-100vh);}
-  }
-</style>
+    /* On place quelques bulles aléatoirement */
+    .atom:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .atom:nth-child(2) { left: 25%; animation-delay: 2s; }
+    .atom:nth-child(3) { left: 45%; animation-delay: 4s; }
+    .atom:nth-child(4) { left: 65%; animation-delay: 1s; }
+    .atom:nth-child(5) { left: 80%; animation-delay: 3s; }
+  </style>
 </head>
-
 <body>
 
-<header>
-  <h1>Bienvenue en Physique-Chimie ⚗️</h1>
-  <p>"La science n’est pas seulement une discipline, c’est une aventure pour comprendre le monde."</p>
-</header>
+  <!-- Petites particules animées -->
+  <div class="atom"></div>
+  <div class="atom"></div>
+  <div class="atom"></div>
+  <div class="atom"></div>
+  <div class="atom"></div>
 
-<img src="59c0c9a5-f238-4f83-a7f0-43e077e5a53d.png" alt="Enfants en laboratoire" class="science-img">
+  <header>
+    <!-- Logo de Physique-Chimie (tu peux le remplacer par ton image) -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Atom_diagram.svg/800px-Atom_diagram.svg.png" alt="Logo Physique Chimie">
+    <h1>Physique-Chimie – Mme Imane</h1>
+    <p class="quote">« La science, c’est la curiosité organisée. » — Jacques Monod</p>
+  </header>
 
-<div class="cta">
-  <a href="#">En savoir plus sur la Physique-Chimie</a>
-</div>
+  <p>Choisissez votre niveau pour accéder à votre espace :</p>
 
-<footer>
-  © 2025 - Inspiré par la curiosité scientifique ✨
-</footer>
+  <a class="link-btn" href="https://whatsapp.com/channel/0029Vb6KjLY89inciiUkq22m">
+    ⚡ 1ère année collège
+  </a>
 
-<!-- Particules décoratives -->
-<script>
-  for(let i = 0; i < 20; i++) {
-    const p = document.createElement('div');
-    p.className = 'particle';
-    p.style.left = Math.random() * 100 + 'vw';
-    p.style.top = Math.random() * 100 + 'vh';
-    p.style.animationDuration = 5 + Math.random() * 10 + 's';
-    document.body.appendChild(p);
-  }
-</script>
+  <a class="link-btn" href="https://whatsapp.com/channel/0029VbAv0ZM2ZjCqn8E3hK46">
+    🧪 2ème année collège
+  </a>
+
+  <footer>
+    <p>© 2025 - Mme Imane El Khaouli | Physique-Chimie</p>
+  </footer>
 
 </body>
 </html>
