@@ -5,74 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Liens Physique-Chimie</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: "Poppins", Arial, sans-serif;
-      text-align: center;
-      padding-top: 60px;
-      background: linear-gradient(135deg, #c2e9fb, #a1c4fd);
       min-height: 100vh;
       margin: 0;
+      padding: 48px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+      background: #111;
+    }
+
+    main {
+      width: 100%;
+      max-width: 420px;
     }
 
     h1 {
-      color: #222;
-      font-size: 2em;
-      margin-bottom: 10px;
+      margin: 0 0 16px;
+      font-size: 2rem;
     }
 
     p {
-      font-size: 1.1em;
-      color: #333;
-      margin-bottom: 40px;
+      margin: 0 0 36px;
+      color: #ddd;
+      line-height: 1.5;
     }
 
     .link-btn {
       display: block;
-      margin: 15px auto;
-      padding: 15px 25px;
-      width: 280px;
+      width: 100%;
+      margin: 14px 0;
+      padding: 18px 24px;
+      border: 2px solid white;
+      border-radius: 10px;
+      background: white;
+      color: #111;
+      font-size: 1.1rem;
+      font-weight: bold;
       text-decoration: none;
-      color: white;
-      background: linear-gradient(90deg, #4f86f7, #7f53ac);
-      border-radius: 12px;
-      font-size: 1.1em;
-      font-weight: 600;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
     }
 
     .link-btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-      background: linear-gradient(90deg, #7f53ac, #4f86f7);
+      background: #111;
+      color: white;
     }
 
     footer {
-      margin-top: 50px;
-      color: #333;
-      font-size: 0.9em;
-    }
-
-    .emoji {
-      font-size: 1.3em;
-      margin-right: 6px;
+      margin-top: 40px;
+      color: #bbb;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <h1> Bienvenue en Physique-Chimie </h1>
-  <p>Choisissez votre niveau pour accéder à votre espace :</p>
+  <main>
+    <h1>Bienvenue en Physique-Chimie</h1>
+    <p>Choisissez votre niveau pour accéder à votre espace :</p>
 
-  <a class="link-btn" href="https://whatsapp.com/channel/0029VbDLrxp0Qearw8YtpX1Q">
-    <span class="emoji"></span> 1ère année collège
-  </a>
+    <a class="link-btn" href="https://whatsapp.com/channel/0029VbDLrxp0Qearw8YtpX1Q">
+      1ère année collège
+    </a>
 
-  <a class="link-btn" href="https://whatsapp.com/channel/0029Vb6KjLY89inciiUkq22m">
-    <span class="emoji"></span> 2ème année collège
-  </a>
+    <a class="link-btn" href="https://whatsapp.com/channel/0029Vb6KjLY89inciiUkq22m">
+      2ème année collège
+    </a>
+  </main>
 
-  <footer>
-    <p>© 2025 - Mme Imane | Physique-Chimie</p>
-  </footer>
+  <footer>© 2026 - Mme Imane | Physique-Chimie</footer>
 </body>
 </html>
